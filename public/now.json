@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "alias": "michaels-star-trek-engage-client-app",
+    "name": "star-trek-engage-client-app",
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/.*", "dest": "/index.html" }
+    ]
+}
