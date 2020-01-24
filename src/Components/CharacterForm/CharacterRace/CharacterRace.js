@@ -17,12 +17,26 @@ export default class CharacterRace extends Component {
                 </header>
                 <form class='new-character-form'>
                     <fieldset>
-                        <select id='note-folder-select' name='note-folder-id'>
-                            <option value="">Homeworld</option>
-                            <option value="">Frontier Colony</option>
-                            <option value="">Starship or Starbase</option>
-                            <option value="">Another Species' World</option>
-                        </select>
+                    <label class="answerOption">
+                        <input type="radio" value="Human" name="answer" required />
+                        <span>Human</span>
+                    </label>
+                    <label class="answerOption">
+                        <input type="radio" value="Vulcan" name="answer" required />
+                        <span>Vulcan</span>
+                    </label>
+                    <label class="answerOption">
+                        <input type="radio" value="Denobulan" name="answer" required />
+                        <span>Denobulan</span>
+                    </label>
+                    <label class="answerOption">
+                        <input type="radio" value="Tellarite" name="answer" required />
+                        <span>Tellarite</span>
+                    </label>
+                    <label class="answerOption">
+                        <input type="radio" value="Andorian" name="answer" required />
+                        <span>Andorian</span>
+                    </label>
                         <br />
                         <Link to='/new-character/values'>
                             Next
