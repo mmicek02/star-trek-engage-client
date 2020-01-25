@@ -1,65 +1,39 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import Header from './Components/Header/Header';
+import RegistrationPage from './Routes/RegistrationPage/RegistrationPage';
+import LoginPage from './Routes/LoginPage/LoginPage';
+import CharacterRace from './Components/CharacterForm/CharacterRace/CharacterRace';
+import CharacterValues from './Components/CharacterForm/CharacterValues/CharacterValues';
+import CharacterUpbringing from './Components/CharacterForm/CharacterUpbringing/CharacterUpbringing';
+import CharacterExperience from './Components/CharacterForm/CharacterExperience/CharacterExperience';
+import CharacterEvent from './Components/CharacterForm/CharacterEvent/CharacterEvent';
+import CharacterName from './Components/CharacterForm/CharacterName/CharacterName';
+import CharacterView from './Components/CharacterView/CharacterView';
+import LandingPage from './Routes/LandingPage/LandingPage';
 
-export default class Header extends Component {
-  /* 
-    This componet will render the top bar that displays the
-    'login', 'register', and 'logout' links
-  */
-}
-
-export default class LoginForm extends Component {
-  /* 
-    This componet will render the form that allows a returning
-    user to sign in with their username and password.
-  */
-}
-
-export default class RegistrationForm extends Component {
-  /* 
-    This componet will render the form that allows a new user
-    to create an account and sumbit that account to the server.
-
-    They should then be prompted to login.
-  */
-}
-
-export default class CharacterForm extends Component {
-  /* 
-    This componet will render the form that allows a  user
-    to create their very own character for the Star Trek TTRPG.
-
-    Once the form is complete it should load the Character in the CharacterView 
-    component.
-  */
-}
-
-export default class CharacterView extends Component {
-  /* 
-    This componet will render the a character that a user has
-    already created.
-  */
-}
-
-export default class UserHomeNav extends Component {
-  /* 
-    This componet will render all of the characers a user has created as a
-    button that will load the clicked character in the CharacterView component.
-  */
-}
-
-export default class UserHomePage extends Component {
-  /* 
-    This componet will render information about the user and their account, it
-    will also provide a button to allow them to create a new character.
-  */
-}
-
-function App() {
-  return (
-    <main className='App'>
-      {/* content goes here */}
-    </main>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <header>
+          <Header />
+        </header>
+        <main className='App'>
+          <Route exact path='/' component={LandingPage} />
+          <Route path='/login' component={LoginPage} />
+          <Route path='/register' component={RegistrationPage} />
+          <Route path='/new-character/race' component={CharacterRace} />
+          <Route path='/new-character/values' component={CharacterValues} />
+          <Route path='/new-character/upbringing' component={CharacterUpbringing} />
+          <Route path='/new-character/career-experience' component={CharacterExperience} />
+          <Route path='/new-character/career-event' component={CharacterEvent} />
+          <Route path='/new-character/name' component={CharacterName} />
+          <Route path='/view-character' component={CharacterView} />
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;

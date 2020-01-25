@@ -22,7 +22,9 @@ export default class CharacterName extends Component {
                 <input placeholder='First Name' type="text" name='first-name' id='first-name' />
               </div>
               <br />
-                <Link to='/view-character/'>Next</Link>
+                <Link to='/view-character/'>
+                  <button>Next</button>
+                </Link>
             </fieldset>
           </form>
       </div>
