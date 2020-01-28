@@ -13,6 +13,69 @@ import CharacterView from './Components/CharacterView/CharacterView';
 import LandingPage from './Routes/LandingPage/LandingPage';
 
 class App extends Component {
+  state = {
+    characters: [],
+  };
+
+  componentDidMount() {
+    
+    handleAddCharacter = addCharacter => {
+      this.setState({
+        characters: [
+          ...this.state.characters,
+        ]
+      })
+    }
+  }
+  renderMainRoutes() {
+    return (
+      <>
+        <Route 
+          exact 
+          path='/' 
+          component={LandingPage} />
+        <Route 
+          path='/login' 
+          component={LoginPage} />
+        <Route 
+          path='/register' 
+          component={RegistrationPage} />
+      </>
+    )
+  }
+  renderCharacterCreationsRoutes() {
+    return (
+      <>
+        <Route 
+          path='/new-character/race' 
+          component={CharacterRace} />
+        <Route 
+          path='/new-character/values' 
+          component={CharacterValues} />
+        <Route 
+          path='/new-character/upbringing' 
+          component={CharacterUpbringing} />
+        <Route 
+          path='/new-character/career-experience' 
+          component={CharacterExperience} />
+        <Route 
+          path='/new-character/career-event' 
+          component={CharacterEvent} />
+        <Route 
+          path='/new-character/name' 
+          component={CharacterName} />
+      </>
+    )
+  }
+  renderUserRoutes() {
+    return (
+      <>
+        <Route 
+          path='/view-character' 
+          component={CharacterView} />
+      </>
+    )
+  }
   render() {
     return (
       <div>
@@ -20,16 +83,9 @@ class App extends Component {
           <Header />
         </header>
         <main className='App'>
-          <Route exact path='/' component={LandingPage} />
-          <Route path='/login' component={LoginPage} />
-          <Route path='/register' component={RegistrationPage} />
-          <Route path='/new-character/race' component={CharacterRace} />
-          <Route path='/new-character/values' component={CharacterValues} />
-          <Route path='/new-character/upbringing' component={CharacterUpbringing} />
-          <Route path='/new-character/career-experience' component={CharacterExperience} />
-          <Route path='/new-character/career-event' component={CharacterEvent} />
-          <Route path='/new-character/name' component={CharacterName} />
-          <Route path='/view-character' component={CharacterView} />
+            {this.renderMainRoutes()}
+            {this.renderCharacterCreationsRoutes()}
+            {this.renderCharacterCreationsRoutes()}
         </main>
       </div>
     );
