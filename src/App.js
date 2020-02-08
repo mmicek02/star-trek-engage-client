@@ -4,13 +4,14 @@ import Header from './Components/Header/Header';
 import RegistrationPage from './Routes/RegistrationPage/RegistrationPage';
 import LoginPage from './Routes/LoginPage/LoginPage';
 import CharacterRace from './Components/CharacterForm/CharacterRace/CharacterRace';
-import CharacterValues from './Components/CharacterForm/CharacterValues/CharacterValues';
+import CharacterEnvironment from './Components/CharacterForm/CharacterValues/CharacterValues';
 import CharacterUpbringing from './Components/CharacterForm/CharacterUpbringing/CharacterUpbringing';
 import CharacterExperience from './Components/CharacterForm/CharacterExperience/CharacterExperience';
 import CharacterEvent from './Components/CharacterForm/CharacterEvent/CharacterEvent';
 import CharacterName from './Components/CharacterForm/CharacterName/CharacterName';
 import CharacterView from './Components/CharacterView/CharacterView';
 import LandingPage from './Routes/LandingPage/LandingPage';
+import ApiContext from './ApiContext';
 
 class App extends Component {
   state = {
@@ -18,14 +19,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    
-    handleAddCharacter = addCharacter => {
-      this.setState({
-        characters: [
-          ...this.state.characters,
-        ]
-      })
-    }
+  
   }
   renderMainRoutes() {
     return (
@@ -50,8 +44,8 @@ class App extends Component {
           path='/new-character/race' 
           component={CharacterRace} />
         <Route 
-          path='/new-character/values' 
-          component={CharacterValues} />
+          path='/new-character/environment' 
+          component={CharacterEnvironment} />
         <Route 
           path='/new-character/upbringing' 
           component={CharacterUpbringing} />
@@ -77,17 +71,23 @@ class App extends Component {
     )
   }
   render() {
+    const value = {
+      characters: this.state.characters,
+    }
+
     return (
-      <div>
-        <header>
-          <Header />
-        </header>
-        <main className='App'>
-            {this.renderMainRoutes()}
-            {this.renderCharacterCreationsRoutes()}
-            {this.renderCharacterCreationsRoutes()}
-        </main>
-      </div>
+      <ApiContext.Provider value={value}>
+        <div>
+          <header>
+            <Header />
+          </header>
+          <main className='App'>
+              {this.renderMainRoutes()}
+              {this.renderCharacterCreationsRoutes()}
+              {this.renderUserRoutes()}
+          </main>
+        </div>
+      </ApiContext.Provider>
     );
   }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-export default class CharacterValues extends Component {
+export default class CharacterEnvironment extends Component {
     /* 
       This componet will render the form that allows a  user
       to create their very own character for the Star Trek TTRPG.
@@ -13,7 +13,7 @@ export default class CharacterValues extends Component {
         return (
             <div>
                 <header>
-                    <h3>Choose a value</h3>
+                    <h3>Choose an Environment</h3>
                 </header>
                 <form class='new-character-form'>
                     <fieldset>
