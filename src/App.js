@@ -3,12 +3,7 @@ import { Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import RegistrationPage from './Routes/RegistrationPage/RegistrationPage';
 import LoginPage from './Routes/LoginPage/LoginPage';
-import CharacterRace from './Components/CharacterForm/CharacterRace/CharacterRace';
-import CharacterEnvironment from './Components/CharacterForm/CharacterValues/CharacterValues';
-import CharacterUpbringing from './Components/CharacterForm/CharacterUpbringing/CharacterUpbringing';
-import CharacterExperience from './Components/CharacterForm/CharacterExperience/CharacterExperience';
-import CharacterEvent from './Components/CharacterForm/CharacterEvent/CharacterEvent';
-import CharacterName from './Components/CharacterForm/CharacterName/CharacterName';
+import NewCharacterForm from './Components/CharacterForm/NewCharacterForm';
 import CharacterView from './Components/CharacterView/CharacterView';
 import LandingPage from './Routes/LandingPage/LandingPage';
 import ApiContext from './ApiContext';
@@ -41,23 +36,8 @@ class App extends Component {
     return (
       <>
         <Route 
-          path='/new-character/race' 
-          component={CharacterRace} />
-        <Route 
-          path='/new-character/environment' 
-          component={CharacterEnvironment} />
-        <Route 
-          path='/new-character/upbringing' 
-          component={CharacterUpbringing} />
-        <Route 
-          path='/new-character/career-experience' 
-          component={CharacterExperience} />
-        <Route 
-          path='/new-character/career-event' 
-          component={CharacterEvent} />
-        <Route 
-          path='/new-character/name' 
-          component={CharacterName} />
+          path='/new-character' 
+          component={NewCharacterForm} />
       </>
     )
   }
@@ -71,12 +51,12 @@ class App extends Component {
     )
   }
   render() {
-    const value = {
-      characters: this.state.characters,
-    }
+    // const value = {
+    //   characters: this.state.characters,
+    // }
 
     return (
-      <ApiContext.Provider value={value}>
+      <ApiContext.Provider>
         <div>
           <header>
             <Header />

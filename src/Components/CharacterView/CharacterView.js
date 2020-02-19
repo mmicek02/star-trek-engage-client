@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CharacterName from '../CharacterForm/CharacterName/CharacterName';
 export default class CharacterView extends Component {
     /* 
       This componet will render the a character that a user has
