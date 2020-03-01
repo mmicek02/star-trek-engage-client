@@ -10,8 +10,6 @@ export default class NewCharacter extends Component {
     return (
       <div className='LoginPage'>
         <h2>Create a New Character</h2>
-        <Route path='/new-character/race' component={CharacterRace} />
-        <Route path='/new-character/values' component={CharacterValues} />
       </div>
     )
   }

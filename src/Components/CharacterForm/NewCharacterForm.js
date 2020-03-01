@@ -3,7 +3,9 @@ import React, { Component } from 'react'
 import SpeciesContext from '../../Character-context/SpeciesContext';
 import SpeciesControls from '../../Character-context/SpeciesControl';
 import SpeciesTextDetails from './CharacterSpecies/CharacterSpeciesDetails';
+
 import ApiContext from '../../ApiContext';
+
 import RoleContext from '../../Character-context/RoleContext';
 import RoleControls from '../../Character-context/RoleControls';
 import RoleTextDetails from './CharacterRole/RoleTextDetails';
@@ -24,7 +26,7 @@ class NewCharacterForm extends Component {
         this.state = {
             characterid: 1,
             userid: 1,
-            charaterrole: '',
+            characterrole: '',
             species: '',
             attributes: [
                 11, 10, 9, 9, 8, 7
@@ -41,7 +43,7 @@ class NewCharacterForm extends Component {
     updateCharacterRole = (characterRole) => {
         if( characterRole === 'Chief Engineer') {
             this.setState({
-                role: characterRole,
+                characterrole: characterRole,
                 attributes: [
                     7, 8, 9, 9, 10, 11
                 ],
@@ -53,7 +55,7 @@ class NewCharacterForm extends Component {
 
         if( characterRole === 'Chief of Security') {
             this.setState({
-                role: characterRole,
+                characterrole: characterRole,
                 attributes: [
                     9, 11, 9, 7, 10, 8
                 ],
@@ -65,7 +67,7 @@ class NewCharacterForm extends Component {
 
         if( characterRole === 'Chief Medical Officer') {
             this.setState({
-                role: characterRole,
+                characterrole: characterRole,
                 attributes: [
                     9, 11, 9, 7, 10, 8
                 ],
@@ -77,7 +79,7 @@ class NewCharacterForm extends Component {
 
         if( characterRole === 'Science Officer') {
             this.setState({
-                role: characterRole,
+                characterrole: characterRole,
                 attributes: [
                     9, 11, 9, 7, 10, 8
                 ],
@@ -102,10 +104,11 @@ class NewCharacterForm extends Component {
     }
     handleSubmit = e => {
         e.preventDefault();
+
         const characterInfo = {
             characterid: this.state.characterid,
             userid: this.state.userid,
-            charaterrole: this.state.charaterrole,
+            characterrole: this.state.characterrole,
             species: this.state.species,
             attributes: this.state.attributes,
             disciplines: this.state.disciplines,
@@ -114,7 +117,7 @@ class NewCharacterForm extends Component {
             equipment: this.state.equipment,
         }
 
-        const url ='http://localhost:8000/api/characters/';
+        const url ='http://localhost:8000/api/characters';
         const options = {
             method: 'POST',
             headers: {
@@ -126,10 +129,10 @@ class NewCharacterForm extends Component {
         fetch(url, options)
       
         .then(res => {
-          if(!res.ok) {
-            throw new Error('Something went wrong, please try again later');
-          }
-          return res.json();
+            if(!res.ok) {
+                throw new Error('Something went wrong, please try again later');
+            }
+            return res.json();
         })
         .then(resJson => {
           this.context.characters.push(resJson)
@@ -142,7 +145,7 @@ class NewCharacterForm extends Component {
             species: this.state.species
         }
         const contextRoleValue = {
-            role: this.state.role
+            characterrole: this.state.characterrole
         }
         return (
             <div>

@@ -1,15 +1,15 @@
 const CharacterSpeciesRole = {
     'Chief Engineer': {
-        body: 'An aggressive, passionate people from the frozen moon Andoria, the Andorians have been part of the United Federation of Planets since its foundation, having been firm allies of Humanity for several years beforehand. Their blue skin, pale hair, and antennae give them a distinctive appearance, and while the Andorian Imperial Guard was demobilized when the Federation was founded, they still maintain strong military traditions, and a tradition of ritualized honor-duels known as Ushaan, using razor- sharp ice-mining tools.'
+        body: 'Chief Engineer'
     },
     'Chief of Security': {
-        body: 'Hailing from the planet Denobula, Denobulans are a gregarious, inquisitive people who have been allies of Humanity since the 2130s. Though Denobula was not one of the founders of the 􏰊ederation, the 􏰅enobulans 􏰈oined soon after. Denobulans are a sociable people, with distinctive expressive features, who are used to living in close, communal conditions, and whose extended family groups are large and complex — a Denobulan may have several spouses, each of whom may have several partners of their own, and dozens of children between them. Culturally, they are intellectually curious, perceptive, and interested in a wide range of philosophies, though their scholarly nature, large families, and gregarious nature means that relatively few of them venture far from their homeworld.'
+        body: 'Chief of Security'
     },
     'Chief Medical Officer': {
-        body: 'Originating on the planet Earth in the Sol system, Humans are a resilient, diverse, and adaptable species, who developed from fractious, warring nations on the brink of mutual annihilation to a united, peaceful society in less than a century, and managed to forge alliances between former enemies within a century of achieving interstellar space 􏰄ight. Earth is a founder and pivotal member of the United 􏰊ederation of Planets, and many of the 􏰊ederation􏰁s institutions can be found on Earth. Humans often exhibit a dichotomy in their nature — being both driven to strong emotion and careful reason — and while they have largely grown beyond their warlike and divisive past, their drive and capacity for aggression are as much a part of their success as their curiosity and analytical minds.'
+        body: 'Chief Medical Officer'
     },
     'Science Officer': {
-        body: 'The stout, hirsute Tellarite species comes from Tellar Prime, a temperate planet in the Alpha 􏰐uadrant. Theirs is a culture noted for being abrasive and argumentative, with a stubborn pride, quick tempers, and little patience. However, this is only a superficial view: while Tellarites are argumentative, it comes from a sense of intellectual honesty and rigorous skepticism. To a Tellarite, no idea, concept, or person is beyond challenge or analysis, and any notion that cannot stand up to scrutiny is an unworthy one. Tellarites revel in debates, and tend to greet one another with criticisms, complaints, and even insults; failing to respond in kind is poorly-regarded, as it displays a weakness of character and an unwillingness to confront flaws.'
+        body: 'Science Officer'
     }
 }
 

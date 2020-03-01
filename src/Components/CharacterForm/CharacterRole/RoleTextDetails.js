@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import CharacterRoleCopy from '../../CharacterSelectionDetails/CharacterRoleCopy'
-import SpeciesContext from '../../../Character-context/RoleContext';
+import RoleContext from '../../../Character-context/RoleContext';
 
 class RoleTextDeails extends Component {
-  static contextType = SpeciesContext;
+  static contextType = RoleContext;
 
   render() {
-    const roleCopy = CharacterRoleCopy[this.context.role] || {}
+    const roleCopy = CharacterRoleCopy[this.context.characterrole] || {}
     return (
       <section>
         <p>{roleCopy.body}</p>

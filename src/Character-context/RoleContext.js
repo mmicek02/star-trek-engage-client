@@ -1,7 +1,7 @@
 import React from 'react'
 
 const RoleContext = React.createContext({
-    role: ''
+    characterrole: ''
 })
 
 export default RoleContext
