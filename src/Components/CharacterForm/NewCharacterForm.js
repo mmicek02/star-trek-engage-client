@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import SpeciesContext from '../../Character-context/SpeciesContext';
 import SpeciesControls from '../../Character-context/SpeciesControl';
 import SpeciesTextDetails from './CharacterSpecies/CharacterSpeciesDetails';
-
+import ApiContext from '../../ApiContext';
 import RoleContext from '../../Character-context/RoleContext';
 import RoleControls from '../../Character-context/RoleControls';
 import RoleTextDetails from './CharacterRole/RoleTextDetails';
@@ -16,10 +16,15 @@ class NewCharacterForm extends Component {
       Once the form is complete it should load the Character in the CharacterView 
       component.
     */
+
+    static contextType = ApiContext;
+
     constructor(props) {
         super(props);
         this.state = {
-            role: '',
+            characterid: 1,
+            userid: 1,
+            charaterrole: '',
             species: '',
             attributes: [
                 11, 10, 9, 9, 8, 7
@@ -27,8 +32,9 @@ class NewCharacterForm extends Component {
             disciplines: [
                 5, 4, 3, 3, 2, 2
             ],
-            value: '',
-            name: ''
+            charactervalue: 'Logical',
+            charactername: '',
+            equipment: 'Tricorder, Comm Badge, Phaser'
         }
     }
     // Updates Character's role and selects the best attributes and disciplines for the role
@@ -94,13 +100,41 @@ class NewCharacterForm extends Component {
             name: CharacterName
         })
     }
-      handleSubmit = e => {
+    handleSubmit = e => {
         e.preventDefault();
-        console.log(this.state);
-
-        const characterSpeciesInfo = {
-            species: this.state.species.value
+        const characterInfo = {
+            characterid: this.state.characterid,
+            userid: this.state.userid,
+            charaterrole: this.state.charaterrole,
+            species: this.state.species,
+            attributes: this.state.attributes,
+            disciplines: this.state.disciplines,
+            charactervalue: this.state.charactervalue,
+            charactername: this.state.charactername,
+            equipment: this.state.equipment,
         }
+
+        const url ='http://localhost:8000/api/characters/';
+        const options = {
+            method: 'POST',
+            headers: {
+              'content-type': 'application/json'
+            },
+            body: JSON.stringify(characterInfo)
+        };
+    
+        fetch(url, options)
+      
+        .then(res => {
+          if(!res.ok) {
+            throw new Error('Something went wrong, please try again later');
+          }
+          return res.json();
+        })
+        .then(resJson => {
+          this.context.characters.push(resJson)
+          //this.props.history.push(`/users/${characterInfo.userid}`) 
+        })
       }
     
     render() {

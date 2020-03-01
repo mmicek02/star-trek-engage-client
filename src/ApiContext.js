@@ -1,7 +1,10 @@
 import React from 'react';
 
 const ApiContext = React.createContext({
-    chararcters: [],
+    characters: [],
+    addCharacters: () => {},
+    deleteCharacters: () => {},
+    updateCharacters: () => {},
 })
 
 export default ApiContext
