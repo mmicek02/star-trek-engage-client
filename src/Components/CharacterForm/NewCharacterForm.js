@@ -120,10 +120,10 @@ class NewCharacterForm extends Component {
         const url ='http://localhost:8000/api/characters';
         const options = {
             method: 'POST',
+            body: JSON.stringify(characterInfo),
             headers: {
               'content-type': 'application/json'
-            },
-            body: JSON.stringify(characterInfo)
+            }
         };
     
         fetch(url, options)
@@ -134,13 +134,37 @@ class NewCharacterForm extends Component {
             }
             return res.json();
         })
-        .then(resJson => {
-          this.context.characters.push(resJson)
-          //this.props.history.push(`/users/${characterInfo.userid}`) 
+        .then(data => {
+          this.setState({
+            characterid: 1,
+            userid: 1,
+            characterrole: '',
+            species: '',
+            attributes: [
+                11, 10, 9, 9, 8, 7
+            ],
+            disciplines: [
+                5, 4, 3, 3, 2, 2
+            ],
+            charactervalue: '',
+            charactername: '',
+            equipment: ''
+          })
+          this.props.handleAddCharacter(characterInfo) 
+        })
+        .catch(err => {
+            this.setState({
+                error: err.message
+            })
         })
       }
     
     render() {
+
+        const error = this.state.error 
+        ? <div className="error">{this.state.error}</div>
+        : "";
+
         const contextSpeciesValue = {
             species: this.state.species
         }
@@ -152,6 +176,7 @@ class NewCharacterForm extends Component {
                 <header>
                     <h1>Create a new character</h1>
                 </header>
+                { error }
                 <form className='new-character-form'>
                     {/* Add Role to Character */}
                     <RoleContext.Provider
