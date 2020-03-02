@@ -24,7 +24,7 @@ class NewCharacterForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            characterid: 1,
+            characterid: '',
             userid: 1,
             characterrole: '',
             species: '',
@@ -69,7 +69,7 @@ class NewCharacterForm extends Component {
             this.setState({
                 characterrole: characterRole,
                 attributes: [
-                    9, 11, 9, 7, 10, 8
+                    9, 8, 9, 11, 7, 10
                 ],
                 disciplines: [
                     2, 5, 3, 3, 4, 2
@@ -81,7 +81,7 @@ class NewCharacterForm extends Component {
             this.setState({
                 characterrole: characterRole,
                 attributes: [
-                    9, 11, 9, 7, 10, 8
+                    9, 11, 7, 9, 10, 8
                 ],
                 disciplines: [
                     2, 5, 3, 3, 4, 2
@@ -99,7 +99,7 @@ class NewCharacterForm extends Component {
     // Update Character's Name
     updateCharacterName = (CharacterName) => {
         this.setState({
-            name: CharacterName
+            charactername: CharacterName
         })
     }
     handleSubmit = e => {
@@ -134,23 +134,10 @@ class NewCharacterForm extends Component {
             }
             return res.json();
         })
-        .then(data => {
-          this.setState({
-            characterid: 1,
-            userid: 1,
-            characterrole: '',
-            species: '',
-            attributes: [
-                11, 10, 9, 9, 8, 7
-            ],
-            disciplines: [
-                5, 4, 3, 3, 2, 2
-            ],
-            charactervalue: '',
-            charactername: '',
-            equipment: ''
-          })
-          this.props.handleAddCharacter(characterInfo) 
+        .then(resJson => {
+            console.log(this.state);
+            this.context.characters.push(resJson)
+            this.props.history.push(`/api/users/${characterInfo.userid}`)
         })
         .catch(err => {
             this.setState({

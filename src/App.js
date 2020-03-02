@@ -4,8 +4,9 @@ import Header from './Components/Header/Header';
 import RegistrationPage from './Routes/RegistrationPage/RegistrationPage';
 import LoginPage from './Routes/LoginPage/LoginPage';
 import NewCharacterForm from './Components/CharacterForm/NewCharacterForm';
-import CharacterView from './Components/CharacterView/CharacterView';
 import LandingPage from './Routes/LandingPage/LandingPage';
+import CharacterPageMain from './Components/CharacterView/CharacterPageMain';
+import CharacterListMain from './Components/CharacterListMain/CharacterListMain';
 import ApiContext from './ApiContext';
 import config from './config';
 
@@ -17,17 +18,18 @@ class App extends Component {
 
   componentDidMount() {
     Promise.all([
-      fetch(`${config.API_ENDPOINT}/characters`)
+      fetch(`${config.API_ENDPOINT}/characters`),
+      fetch(`${config.API_ENDPOINT}/users`)
     ])
-      .then(([charactersRes]) => {
+      .then(([charactersRes, usersRes]) => {
         if (!charactersRes.ok)
           return charactersRes.json().then(e => Promise.reject(e))
-        // if (!usersRes.ok)
-        //   return usersRes.json().then(e => Promise.reject(e))
+        if (!usersRes.ok)
+          return usersRes.json().then(e => Promise.reject(e))
 
         return Promise.all([
           charactersRes.json(),
-//          usersRes.json(),
+          usersRes.json(),
         ])
       })
       .then(([characters]) => {
@@ -37,15 +39,6 @@ class App extends Component {
         console.error({ error })
       })
   }
-
-  // handleAddUsers = users => {
-  //   this.setState({
-  //     users: [
-  //       ...this.state.users,
-  //       users
-  //     ]
-  //   })
-  // }
 
   handleAddCharacter = character => {
     this.setState({
@@ -90,9 +83,17 @@ class App extends Component {
   renderUserRoutes() {
     return (
       <>
+        {['/api/users/:userid'].map(path =>
+          <Route
+            exact
+            key={path} 
+            path={path}
+            component={CharacterListMain} />
+        )}
+        
         <Route 
-          path='/view-character' 
-          component={CharacterView} />
+          path='/api/characters/:characterid' 
+          component={CharacterPageMain} />
       </>
     )
   }
@@ -101,6 +102,7 @@ class App extends Component {
       characters: this.state.characters,
       users: this.state.users,
       addCharacter: this.handleAddCharacter,
+      deleteCharacter: this.handleDeleteCharacter,
       addUsers: this.handleAddUsers
     }
 
