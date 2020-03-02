@@ -11,5 +11,5 @@ export const getCharactersForUser = (characters=[], userid) => (
   : characters.filter(character => character.userid == userid)
 )
 
-export const countNotesForFolder = (notes=[], userid) =>
-notes.filter(note => note.userid == userid).length
+export const countCharactersForUser = (characters=[], userid) =>
+characters.filter(character => character.userid == userid).length
