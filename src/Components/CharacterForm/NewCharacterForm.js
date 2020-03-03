@@ -117,7 +117,7 @@ class NewCharacterForm extends Component {
             equipment: this.state.equipment,
         }
 
-        const url ='http://localhost:8000/api/characters';
+        const url ='https://infinite-spire-80617.herokuapp.com/api/characters';
         const options = {
             method: 'POST',
             body: JSON.stringify(characterInfo),
