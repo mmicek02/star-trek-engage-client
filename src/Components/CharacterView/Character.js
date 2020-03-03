@@ -30,7 +30,7 @@ export default class Character extends React.Component {
   }
 
   render() {
-    const { charactername, characterid } = this.props
+    const { charactername, characterid, characterrole, species} = this.props
         return (
       <div className='Character'>
         <h2 className='Character__name'>
