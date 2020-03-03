@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import '../../style/main.css'
-import LoginPage from '../../Routes/LoginPage/LoginPage'
-import RegistrationPage from '../../Routes/RegistrationPage/RegistrationPage'
 
 class Header extends Component {
 
@@ -20,6 +18,9 @@ class Header extends Component {
                 {'/'}
                 <Link to='/register'>
                     Register
+                </Link>
+                <Link to='/api/users/1'>
+                    View Characters
                 </Link>
           </nav>
         )

@@ -26,7 +26,7 @@ export default class CharacterListMain extends React.Component {
                             <li key={character.characterid}>
                             <Character
                                 key={character.characterid}
-                                id={character.characterid}
+                                characterid={character.characterid}
                                 charactername={character.charactername}
                                 userid={character.userid}
                             />

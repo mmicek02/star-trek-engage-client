@@ -15,7 +15,7 @@ export default class LandingPage extends Component {
                     Trek tabletop role playing game (TTRPG) character creation process. This app will take 
                     the user (player) through each step involved in the process of making their 
                     character.</p>
-                    <Link to='/new-character/race'>CREATE A CHARACTER</Link>
+                    <Link to='/new-character'>CREATE A CHARACTER</Link>
                 </section>
                 <section>
                     <header>

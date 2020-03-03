@@ -24,7 +24,7 @@ class NewCharacterForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            characterid: '',
+            characterid: 1,
             userid: 1,
             characterrole: '',
             species: '',

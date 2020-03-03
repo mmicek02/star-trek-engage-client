@@ -3,7 +3,7 @@ export const findUser = (users=[], userid) =>
 users.find(user => user.userid === userid)
 
 export const findCharacter = (characters=[], characterid) =>
-characters.find(character => character.characterid === characterid)
+characters.find(character => character.characterid == characterid)
 
 export const getCharactersForUser = (characters=[], userid) => (
 (!userid)

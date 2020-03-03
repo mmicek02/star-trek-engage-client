@@ -34,7 +34,7 @@ export default class Character extends React.Component {
         return (
       <div className='Character'>
         <h2 className='Character__name'>
-          <Link to={`/api/character/${characterid}`}>
+          <Link to={`/api/characters/${characterid}`}>
             {charactername}
           </Link>
         </h2>
