@@ -38,9 +38,9 @@ export default class CharacterPageMain extends React.Component {
             <h3>Attributes</h3>
             <section>
               <ul>
-                <li>Control: {character.attributes}</li>
-                <li>Fitness: {character.attributes}</li>
-                <li>Presence: {character.attributes}</li>
+                <li>Control: {character.attributes[0]}</li>
+                <li>Fitness: {character.attributes[1]}</li>
+                <li>Presence: {character.attributes[2]}</li>
               </ul>
             </section>
             <section>
