@@ -19,7 +19,7 @@ export default class CharacterPageMain extends React.Component {
     const { characterid } = this.props.match.params
     const character = findCharacter(characters, characterid) || { charactername: '' }
     console.log(`character.attributes: ${character.attributes}`)
-    console.log(`character: ${character}`)
+    console.log(character)
     return (
       <section className='CharacterPageMain'>
         <div className='CharacterPageMain__charactername'>
