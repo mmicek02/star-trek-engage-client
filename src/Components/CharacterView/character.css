@@ -19,7 +19,7 @@
     font-size: 12px;
     height: var(--character-button-height);
     position: relative;
-    top: calc((var(--character-button-height) + 16px) * -1);
+    top: calc((var(--character-button-height) + 48px) * -1);
     transform-origin: right bottom;
     transform: rotate(-90deg);
     width: calc(var(--character-height));
