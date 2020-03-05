@@ -38,6 +38,8 @@ export default class Character extends React.Component {
           <Link to={`/api/characters/${characterid}`}>
             {charactername}
           </Link>
+          <h3>{characterrole}</h3>
+          <h3>{species}</h3>
         </h2>
         <button
           className='Character__delete'
