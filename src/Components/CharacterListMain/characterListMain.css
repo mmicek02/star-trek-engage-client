@@ -13,11 +13,11 @@
     margin: 0 10px;
   }
   
-.CharacterListMain__add-note-button {
+.CharacterListMain__add-character-button {
     margin: 0 auto 20px;
   }
 
-.CharacterListMain__add-note-button:hover {
+.CharacterListMain__add-character-button:hover {
     background-color: #29862e;
     color: white;
   }

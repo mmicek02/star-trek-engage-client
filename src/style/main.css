@@ -23,7 +23,7 @@
     left: 0;
     right: 0;
     z-index: 10;
-    background-color: black;
+    background-color: #010d1e;
   }
 
   header {
@@ -31,7 +31,7 @@
   }
   
   a:visited {
-    color: orange;
+    color: #FFB72F;
   }
 
   a:hover {

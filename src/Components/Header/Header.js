@@ -5,7 +5,7 @@ import '../../style/main.css'
 class Header extends Component {
 
     render() {
-        const logo = require('../../Media/StarTrekEngageLogo.jpg');
+        const logo = require('../../Media/StarTrekEngageLogo.png');
         return (
             <nav className='Header'>
                 <Link to='/'>
