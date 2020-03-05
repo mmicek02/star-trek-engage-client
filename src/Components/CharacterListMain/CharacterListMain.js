@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Character from '../CharacterView/Character'
 import ApiContext from '../../ApiContext'
 import { getCharactersForUser } from '../../characters-helpers'
+import './characterListMain.css'
 
 export default class CharacterListMain extends React.Component {
     static defaultProps = {
