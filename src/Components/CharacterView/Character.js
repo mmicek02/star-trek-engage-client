@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ApiContext from '../../ApiContext'
 import config from '../../config'
+import './character.css'
 
 export default class Character extends React.Component {
   static defaultProps ={

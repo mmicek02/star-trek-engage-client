@@ -23,20 +23,30 @@
     left: 0;
     right: 0;
     z-index: 10;
+    background-color: black;
   }
-  
+
   header {
     padding: 45px 15px;
+  }
+  
+  a:visited {
+    color: orange;
+  }
+
+  a:hover {
+    color: rgb(245, 14, 245);
   }
   
   section {
     min-height: 200px;
     padding: 30px 15px;
-    background-color: #bbb;
+    background-color: white;
+    border-bottom-style: solid;
   }
   
   section:nth-child(even) {
-    background-color: #ddd;
+    background-color: whitesmoke;
   }
   
   p {
@@ -46,5 +56,8 @@
   
   p + p {
     margin-top: 15px;
+  }
+  .logo {
+    max-width: 500px;
   }
   

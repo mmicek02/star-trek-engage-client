@@ -5,20 +5,25 @@ import '../../style/main.css'
 class Header extends Component {
 
     render() {
+        const logo = require('../../Media/StarTrekEngageLogo.jpg');
         return (
             <nav className='Header'>
                 <Link to='/'>
-                <h1>
-                    Star Trek Engage!
-                </h1>
+                <img 
+                    src={logo} 
+                    alt="Logo for Star Trek Engage!"
+                    className='logo'
+                />
                 </Link>
+                <br />
                 <Link to='/login'>
                     Login
                 </Link>
-                {'/'}
+                {' / '}
                 <Link to='/register'>
                     Register
                 </Link>
+                {' / '}
                 <Link to='/api/users/1'>
                     View Characters
                 </Link>
