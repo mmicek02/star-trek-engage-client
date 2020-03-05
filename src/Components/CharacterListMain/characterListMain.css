@@ -1,10 +1,13 @@
+.CharacterListMain {
+    display: flex;
+    justify-content: center;
+}
+
 .CharacterListMain ul {
     list-style-type: none;
     margin: 0;
     padding: 10px;
     padding-top: 75px;
-    display: flex;
-    justify-content: center;
   }
 .CharacterListMain p {
     margin: 0;
