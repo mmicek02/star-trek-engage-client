@@ -3,9 +3,7 @@
     margin: 0;
     padding: 10px;
     padding-top: 75px;
-    display: flex;
-    align-content: center;
-    max-width: 800px;
+    align-items: center;
   }
 .CharacterListMain p {
     margin: 0;
