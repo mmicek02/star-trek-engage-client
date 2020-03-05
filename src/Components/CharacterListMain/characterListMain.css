@@ -2,18 +2,24 @@
     list-style-type: none;
     margin: 0;
     padding: 10px;
-    padding-top: 50px;
+    padding-top: 75px;
+    display: flex;
+    align-content: center;
+    max-width: 800px;
   }
-  
-  .CharacterListMain__button-container {
+.CharacterListMain p {
+    margin: 0;
+}
+.CharacterListMain__button-container {
     max-width: 380px;
     margin: 0 10px;
   }
   
-  .CharacterListMain__add-note-button {
+.CharacterListMain__add-note-button {
     margin: 0 auto 20px;
   }
-  .CharacterListMain__add-note-button:hover {
+
+.CharacterListMain__add-note-button:hover {
     background-color: #29862e;
     color: white;
   }
