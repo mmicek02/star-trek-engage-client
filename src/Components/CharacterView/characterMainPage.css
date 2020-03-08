@@ -10,6 +10,7 @@
     padding-top: 25px;
     display: flex;
     justify-content: center;
+    flex-flow: row wrap;
 }
 
 .CharacterPageMain li {
@@ -18,6 +19,7 @@
     background-color: #041a3a;
     border: 2px solid #041a3a;
     border-radius: 25px;
+    min-width: 150px;
     max-width: 300px;
 }
 
