@@ -1,12 +1,9 @@
-/* .CharacterListMain {
+ .CharacterListMain {
     display: flex;
     justify-content: center;
     align-content: space-between;
-} */
-.CharacterPageMain__characterSheet {
-    display: flex;
-    justify-content: center;
 }
+
 .CharacterPageMain ul {
     list-style-type: none;
     margin: 5px;
