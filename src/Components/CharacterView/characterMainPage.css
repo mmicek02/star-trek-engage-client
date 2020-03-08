@@ -5,7 +5,7 @@
 
 .CharacterPageMain ul {
     list-style-type: none;
-    margin: 0;
+    margin: 5px;
     padding: 10px;
     padding-top: 25px;
     display: flex;
@@ -24,5 +24,5 @@
 }
 
 h2 {
-    padding-top: 75;
+    padding-top: 100px;
 }
