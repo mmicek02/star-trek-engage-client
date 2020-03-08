@@ -8,6 +8,8 @@
     margin: 0;
     padding: 10px;
     padding-top: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 .CharacterPageMain li {
@@ -17,4 +19,8 @@
     border: 2px solid #041a3a;
     border-radius: 25px;
     max-width: 300px;
+}
+
+h2 {
+    padding-top: 75;
 }
