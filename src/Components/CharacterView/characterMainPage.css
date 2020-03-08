@@ -16,7 +16,8 @@
 }
 
 .CharacterPageMain li {
-    padding: 100px;
+    padding: 10px;
+    margin: 10px;
     color: white;
     background-color: #041a3a;
     border: 2px solid #041a3a;
