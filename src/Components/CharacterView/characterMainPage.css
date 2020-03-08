@@ -2,7 +2,12 @@
     list-style-type: none;
     margin: 0;
     padding: 10px;
+}
+
+.CharacterPageMain li {
+    padding: 10px;
     background-color: #041a3a;
     border: 2px solid #041a3a;
     border-radius: 25px;
-  }
+    color: white;
+}
