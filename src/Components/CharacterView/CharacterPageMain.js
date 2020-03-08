@@ -26,7 +26,7 @@ export default class CharacterPageMain extends React.Component {
     console.log(character)
     return (
       <section className='CharacterPageMain'>
-        <div className='CharacterPageMain__charactername'>
+        <div className='CharacterPageMain__characterSheet'>
           {character.charactername.split(/\n \r|\n/).map((para, i) =>
             <p key={i}>{para}</p>
           )}
