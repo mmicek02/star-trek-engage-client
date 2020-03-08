@@ -20,7 +20,7 @@ export default class CharacterPageMain extends React.Component {
     const character = findCharacter(characters, characterid)
     if (!character) {
       return <div></div>
-    }
+    } 
     console.log(`character.attributes: ${character.attributes}`)
     console.log(character)
     return (
@@ -41,10 +41,6 @@ export default class CharacterPageMain extends React.Component {
                 <li>Control: {character.attributes[0]}</li>
                 <li>Fitness: {character.attributes[1]}</li>
                 <li>Presence: {character.attributes[2]}</li>
-              </ul>
-            </section>
-            <section>
-              <ul>
                 <li>Daring: {character.attributes[3]}</li>
                 <li>Insight: {character.attributes[4]}</li>
                 <li>Reason: {character.attributes[5]}</li>
@@ -58,10 +54,6 @@ export default class CharacterPageMain extends React.Component {
                 <li>Command: {character.disciplines[0]}</li>
                 <li>Security: {character.disciplines[1]}</li>
                 <li>Science: {character.disciplines[2]}</li>
-              </ul>
-            </section>
-            <section>
-              <ul>
                 <li>Conn: {character.disciplines[3]}</li>
                 <li>Engingeering: {character.disciplines[4]}</li>
                 <li>Medicine: {character.disciplines[5]}</li>
