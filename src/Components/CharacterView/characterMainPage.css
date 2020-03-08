@@ -1,7 +1,7 @@
  .CharacterListMain {
     display: flex;
     justify-content: center;
-    /*align-content: space-between;*/
+    align-content: space-between;
 }
 
 .CharacterPageMain ul {
@@ -30,7 +30,13 @@ h2 {
     padding-top: 100px;
 }
 
-h3 {
+.GroupHeading {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.GroupHeading h3 {
     padding: 10px;
     margin: 10px;
     background-color: #FFB72F;

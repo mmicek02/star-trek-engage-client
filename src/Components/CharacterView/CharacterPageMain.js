@@ -36,7 +36,7 @@ export default class CharacterPageMain extends React.Component {
             <h4>Role: <span className="characterRole">{character.characterrole}</span></h4>
           </section>
           <section>
-            <h3>Attributes</h3>
+            <h3 className="GroupHeading">Attributes</h3>
               <ul>
                 <li>Control: {character.attributes[0]}</li>
                 <li>Fitness: {character.attributes[1]}</li>
@@ -47,7 +47,7 @@ export default class CharacterPageMain extends React.Component {
               </ul>
           </section>
           <section>
-            <h3>Disciplines</h3>
+            <h3 className="GroupHeading">Disciplines</h3>
               <ul>
                 <li>Command: {character.disciplines[0]}</li>
                 <li>Security: {character.disciplines[1]}</li>
@@ -58,11 +58,11 @@ export default class CharacterPageMain extends React.Component {
               </ul>
           </section>
           <section>
-            <h3>Value</h3>
+            <h3 className="GroupHeading">Value</h3>
             <p>{character.charactervalue}</p>
           </section>
           <section>
-            <h3>Equipment</h3>
+            <h3 className="GroupHeading">Equipment</h3>
             <p>{character.equipment}</p>
           </section>
         </div>
