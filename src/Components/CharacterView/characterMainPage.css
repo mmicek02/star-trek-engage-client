@@ -1,7 +1,13 @@
+.CharacterListMain {
+    display: flex;
+    justify-content: center;
+}
+
 .CharacterPageMain ul {
     list-style-type: none;
     margin: 0;
     padding: 10px;
+    padding-top: 25px;
 }
 
 .CharacterPageMain li {
@@ -10,6 +16,5 @@
     background-color: #041a3a;
     border: 2px solid #041a3a;
     border-radius: 25px;
-    display: flex;
     max-width: 300px;
 }
