@@ -1,6 +1,7 @@
 import React from 'react'
 import ApiContext from '../../ApiContext'
 import { findCharacter } from '../../characters-helpers'
+import './characterMainPage.css'
 
 export default class CharacterPageMain extends React.Component {
   static defaultProps = {
