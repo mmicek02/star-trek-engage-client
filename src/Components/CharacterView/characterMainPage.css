@@ -29,3 +29,12 @@
 h2 {
     padding-top: 100px;
 }
+
+h4 {
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    background-color: #FFB72F;
+    border: 2px solid #FFB72F;
+    border-radius: 25px;
+}

@@ -32,8 +32,8 @@ export default class CharacterPageMain extends React.Component {
           )}
           <h2>{character.charactername}</h2>
           <section>
-            <h4>Species: {character.species}</h4>
-            <h4>Role: {character.characterrole}</h4>
+            <h4>Species: <span className="characterSpecies">{character.species}</span></h4>
+            <h4>Role: <span className="characterRole">{character.characterrole}</span></h4>
           </section>
           <section>
             <h3>Attributes</h3>
