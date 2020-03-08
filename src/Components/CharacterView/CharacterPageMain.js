@@ -37,7 +37,6 @@ export default class CharacterPageMain extends React.Component {
           </section>
           <section>
             <h3>Attributes</h3>
-            <section>
               <ul>
                 <li>Control: {character.attributes[0]}</li>
                 <li>Fitness: {character.attributes[1]}</li>
@@ -46,11 +45,9 @@ export default class CharacterPageMain extends React.Component {
                 <li>Insight: {character.attributes[4]}</li>
                 <li>Reason: {character.attributes[5]}</li>
               </ul>
-            </section>
           </section>
           <section>
             <h3>Disciplines</h3>
-            <section>
               <ul>
                 <li>Command: {character.disciplines[0]}</li>
                 <li>Security: {character.disciplines[1]}</li>
@@ -59,7 +56,6 @@ export default class CharacterPageMain extends React.Component {
                 <li>Engingeering: {character.disciplines[4]}</li>
                 <li>Medicine: {character.disciplines[5]}</li>
               </ul>
-            </section>
           </section>
           <section>
             <h3>Value</h3>
