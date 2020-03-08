@@ -37,4 +37,5 @@ h4 {
     background-color: #FFB72F;
     border: 2px solid #FFB72F;
     border-radius: 25px;
+    max-width: 500px;
 }
