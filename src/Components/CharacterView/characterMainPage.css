@@ -33,6 +33,8 @@ h2 {
 h3 {
     padding: 10px;
     margin: 10px;
+    display: flex;
+    justify-content: center;
     background-color: #FFB72F;
     border: 2px solid #FFB72F;
     border-radius: 25px;
