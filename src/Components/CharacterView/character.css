@@ -1,51 +1,41 @@
 
-.Character {
-    --character-height: 66px;
+.Character__name {
     background-color: #010d1e;
-    border: 2px solid #041a3a;
-    border-radius: 25px;
+    border: 2px solid blackl;
     color: #cacaca;
-    height: var(--character-height);
+    height: 100px;
     margin-bottom: 8px;
     width: 380px;
-    padding: 4px 0 4px 4px;
+    padding: 8px 0 8px 8px;
     position: relative;
   }
   
-  .Character__delete {
-    --character-button-height: 32px;
-    background-color: #041a3a;
-    border: 0;
-    border-radius: 25px;
-    color: #bdbcbc;
-    float: right;
-    font-size: 12px;
-    height: var(--character-button-height);
-    position: relative;
-    top: calc((var(--character-button-height) + 32px) * -1);
-    transform-origin: right bottom;
-    transform: rotate(-90deg);
-    width: calc(var(--character-height));
-  }
-  .Character__delete:hover {
-    background-color: #bd0909;
-    color: #bdbcbc;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .Character__name {
-    font-size: 20px;
-    margin: 0;
-    color: #bdbcbc;
-    max-width: 80%;
-    min-height: 24px;
-  }
-  .Character__name a {
-    color: #cacaca;
-    display: block;
-    text-decoration: none;
-  }
-  .Character__name a:hover {
-    color: #FFB72F;
-  }
+.Character__delete {
+  --character-button-height: 32px;
+  background-color: #041a3a;
+  border: 0;
+  color: #bdbcbc;
+  float: right;
+  font-size: 12px;
+  top: calc((var(--character-button-height) + 32px) * -1);
+  transform-origin: right bottom;
+  transform: rotate(-90deg);
+  width: calc(var(--character-height));
+}
+
+.Character__delete:hover {
+  background-color: #bd0909;
+  color: #bdbcbc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Character__name a {
+  color: #cacaca;
+  display: block;
+  text-decoration: none;
+}
+
+.Character__name a:hover {
+  color: #FFB72F;
+}
