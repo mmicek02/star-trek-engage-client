@@ -1,6 +1,6 @@
 
 .Character {
-    --character-height: 88px;
+    --character-height: 150px;
     background-color: #010d1e;
     color: #cacaca;
     height: var(--character-height);
@@ -11,7 +11,7 @@
   }
   
   .Character__delete {
-    --character-button-height: 32px;
+    --character-button-height: 150px;
     background-color: #041a3a;
     border: 0;
     color: #bdbcbc;
