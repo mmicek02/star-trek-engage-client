@@ -2,6 +2,8 @@
 .Character {
     --character-height: 88px;
     background-color: #010d1e;
+    border: 2px solid #041a3a;
+    border-radius: 25px;
     color: #cacaca;
     height: var(--character-height);
     margin-bottom: 8px;
@@ -32,7 +34,6 @@
   }
   
   .Character__name {
-    font-family: var(--custom-font);
     font-size: 20px;
     margin: 0;
     max-width: 80%;
