@@ -1,6 +1,6 @@
 
 .Character {
-    --character-height: 88px;
+    --character-height: 66px;
     background-color: #010d1e;
     border: 2px solid #041a3a;
     border-radius: 25px;
@@ -8,7 +8,7 @@
     height: var(--character-height);
     margin-bottom: 8px;
     width: 380px;
-    padding: 8px 0 8px 8px;
+    padding: 4px 0 4px 4px;
     position: relative;
   }
   
