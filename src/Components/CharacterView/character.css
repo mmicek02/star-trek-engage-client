@@ -16,6 +16,7 @@
     --character-button-height: 32px;
     background-color: #041a3a;
     border: 0;
+    border-radius: 25px;
     color: #bdbcbc;
     float: right;
     font-size: 12px;
@@ -28,7 +29,7 @@
   }
   .Character__delete:hover {
     background-color: #bd0909;
-    color: white;
+    color: #bdbcbc;
     cursor: pointer;
     font-weight: bold;
   }
@@ -36,6 +37,7 @@
   .Character__name {
     font-size: 20px;
     margin: 0;
+    color: #bdbcbc;
     max-width: 80%;
     min-height: 24px;
   }
