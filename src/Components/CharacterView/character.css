@@ -7,13 +7,13 @@
     color: #cacaca;
     height: var(--character-height);
     margin-bottom: 8px;
-    width: 680px;
+    width: 380px;
     padding: 8px 0 8px 8px;
     position: relative;
   }
   
   .Character__delete {
-    --character-button-height: 12px;
+    --character-button-height: 32px;
     background-color: #041a3a;
     border: 0;
     border-radius: 25px;
@@ -22,7 +22,7 @@
     font-size: 12px;
     height: var(--character-button-height);
     position: relative;
-    top: calc((var(--character-button-height) + 12px) * -1);
+    top: calc((var(--character-button-height) + 32px) * -1);
     transform-origin: right bottom;
     transform: rotate(-90deg);
     width: calc(var(--character-height));
