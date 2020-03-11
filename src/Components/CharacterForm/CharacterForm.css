@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: "Roboto", sans-serif;
     font-size: 20px;
@@ -16,24 +19,11 @@ section {
     background-color: white;
     border: 0;
 }
-/* .new-character-form {
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-} */
-.new-character-name {
-    display: flex;
-    justify-content: stretch;
-}
 .new-character-question {
-    display:flex;
-    flex-wrap: wrap;
-    align-content: space-between;
     border: 0;
     min-width: 400px;
 }
 .CharacterForm__add-character-button {
-    display: flex;
     padding:1.4em 2.1em;
     margin:0 0.3em 0.3em 0;
     border-radius:0.15em;
@@ -56,4 +46,10 @@ section {
 .CharacterForm__add-character-button:hover {
     background-color: #010d1e;
     color: white;
+}
+.new-character-name {
+    padding:.8em 1.1em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.15em;
+    border-bottom-style: 2px #010d1e solid;
 }

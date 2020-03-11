@@ -212,13 +212,14 @@ class NewCharacterForm extends Component {
                             onChange= {e => this.updateCharacterName(e.target.value)}/>
                     </fieldset>
                         <button
-                            className='CharacterForm__add-character-button'
+                            className='CharacterForm__add-character-button '
                             type="submit"
                             onClick={e => this.handleSubmit(e)}
                         >
                             Enroll In StarFleet!
                         </button>
                 </form>
+                <br />
             </div>
         )
     }
