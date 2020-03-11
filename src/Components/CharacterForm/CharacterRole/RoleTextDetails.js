@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CharacterRoleCopy from '../../CharacterSelectionDetails/CharacterRoleCopy'
 import RoleContext from '../../../Character-context/RoleContext';
+import '../CharacterForm.css'
 
 class RoleTextDeails extends Component {
   static contextType = RoleContext;

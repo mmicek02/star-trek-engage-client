@@ -10,6 +10,8 @@ import RoleContext from '../../Character-context/RoleContext';
 import RoleControls from '../../Character-context/RoleControls';
 import RoleTextDetails from './CharacterRole/RoleTextDetails';
 
+import './CharacterForm.css'
+
 class NewCharacterForm extends Component {
     /* 
       This componet will render the form that allows a  user
@@ -135,7 +137,6 @@ class NewCharacterForm extends Component {
             return res.json();
         })
         .then(resJson => {
-            console.log(this.state);
             this.context.characters.push(resJson)
             this.props.history.push(`/api/users/${characterInfo.userid}`)
         })
@@ -168,7 +169,7 @@ class NewCharacterForm extends Component {
                     {/* Add Role to Character */}
                     <RoleContext.Provider
                         value={contextRoleValue}>
-                        <fieldset>
+                        <fieldset className='new-character-question one'>
                             <h2>Choose your Role</h2>
                             <RoleControls 
                                 onSetRole={this.updateCharacterRole} />
@@ -176,21 +177,19 @@ class NewCharacterForm extends Component {
                         </fieldset>
                     </RoleContext.Provider>
 
-                    <br />
                     {/* Add Species to Character*/}
                     <SpeciesContext.Provider
                         value={contextSpeciesValue}>
-                        <fieldset>
-                            <h2>Choose your Species</h2>
+                        <fieldset className='new-character-question'>
+                            <h2> Choose your Species</h2>
                                 <SpeciesControls 
                                     onSetSpecies={this.updateCharacterSpecies} />
                                 <SpeciesTextDetails />
                         </fieldset>
                     </SpeciesContext.Provider>
 
-                    <br />
                     {/* Add Value*/}
-                    {/* <fieldset>
+                    {/* <fieldset className='new-character-question'>
                         <h2>Choose a Value</h2>
                         <select 
                             id='character-value question' 
@@ -203,21 +202,21 @@ class NewCharacterForm extends Component {
                             <option value="Another World">Another Species' World</option>
                         </select>
                     </fieldset> */}
-                    <br />
                     {/* Add Character Name */}
-                    <fieldset>
+                    <fieldset className='new-character-question'>
                         <h2>Name your Character</h2>
-                        <input 
+                        <input
+                            className='new-character-name' 
                             type="text" 
                             name="Character Name" 
                             onChange= {e => this.updateCharacterName(e.target.value)}/>
                     </fieldset>
-                    <br />
-                        <button 
+                        <button
+                            className='CharacterForm__add-character-button'
                             type="submit"
                             onClick={e => this.handleSubmit(e)}
                         >
-                            Enroll In StarFleet
+                            Enroll In StarFleet!
                         </button>
                 </form>
             </div>
