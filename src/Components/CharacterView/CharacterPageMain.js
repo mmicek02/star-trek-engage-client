@@ -22,8 +22,6 @@ export default class CharacterPageMain extends React.Component {
     if (!character) {
       return <div></div>
     } 
-    console.log(`character.attributes: ${character.attributes}`)
-    console.log(character)
     return (
       <section className='CharacterPageMain'>
         <div className='CharacterPageMain__characterSheet'>

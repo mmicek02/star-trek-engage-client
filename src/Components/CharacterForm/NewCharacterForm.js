@@ -188,20 +188,6 @@ class NewCharacterForm extends Component {
                         </fieldset>
                     </SpeciesContext.Provider>
 
-                    {/* Add Value*/}
-                    {/* <fieldset className='new-character-question'>
-                        <h2>Choose a Value</h2>
-                        <select 
-                            id='character-value question' 
-                            name='note-folder-id'
-                            onChange= {e => this.updateCharacterValue(e.target.value)}
-                        >
-                            <option value="Homeworld">Homeworld</option>
-                            <option value="Colony">Frontier Colony</option>
-                            <option value="Starship">Starship or Starbase</option>
-                            <option value="Another World">Another Species' World</option>
-                        </select>
-                    </fieldset> */}
                     {/* Add Character Name */}
                     <fieldset className='new-character-question'>
                         <h2>Name your Character</h2>

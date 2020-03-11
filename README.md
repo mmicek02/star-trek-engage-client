@@ -1,3 +1,25 @@
+STAR TREK ENGAGE
+
+## LINK TO LIVE APP
+https://star-trek-engage-client-app.now.sh/
+
+## SCREENSHOTS
+![Screenshot of the landing](./src/Components/Media/Screenshots/landingPage.png)
+
+![Screenshot of the character creation](./src/Components/Media/Screenshots/characterCreation.png)
+
+![Screenshot of the character creation](./src/Components/Media/Screenshots/characterList.png)
+## SUMMARY OF APP
+Star Trek Engage is a web application designed as an aid to to players of the Star Trek tabletop role playing game (TTRPG) character creation process. This app will take the user (player) through each step involved in the process of making their character. Buy using the framework and methods already established in the published rulebook by Modiphius Entertainment, using this app means the process of creating a character with compelling motivations and interesting background is even easier. At the end of the process the user of the app will be able to export their completed character sheet as a PDF, meaning they are 100% ready for the thrilling adventures that awaits them and the rest of their crew!
+
+## TECHNOLOY USED
+Font-end: HTML, CSS, JS, REACT
+Back-end: NODE, SQL
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -36,33 +58,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
