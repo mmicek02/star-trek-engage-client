@@ -6,7 +6,7 @@
     height: 100px;
     margin-bottom: 8px;
     width: 380px;
-    padding: 8px 0 8px 8px;
+    padding: 16px 0 0px 8px;
     position: relative;
   }
   
@@ -19,7 +19,6 @@
   font-size: 12px;
   top: calc((var(--character-button-height) + 32px) * -1);
   transform-origin: right bottom;
-  transform: rotate(-90deg);
   width: calc(var(--character-height));
 }
 
