@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../../style/main.css'
 
 export default class RegistrationForm extends Component {
     /* 
@@ -19,7 +20,9 @@ export default class RegistrationForm extends Component {
         <label htmlFor="password">Password </label>
         <input type="password" name='password' id='password' />
       </div>
-      <button type='submit'>Sign Up</button>
+      <button 
+        className="add-character-button"
+        type='submit'>Sign Up</button>
   </form>
     )
   }

@@ -161,10 +161,10 @@ class NewCharacterForm extends Component {
         }
         return (
             <div>
+                { error }
                 <header>
                     <h1>Create a new character</h1>
                 </header>
-                { error }
                 <form className='new-character-form'>
                     {/* Add Role to Character */}
                     <RoleContext.Provider

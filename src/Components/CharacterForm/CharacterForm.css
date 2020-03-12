@@ -34,7 +34,7 @@ section {
     text-transform:uppercase;
     font-weight:400;
     color:#FFFFFF;
-    background-color:#FFB72F;
+    background-color:#010d1e;
     box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
     position:relative;
 }
@@ -44,8 +44,8 @@ section {
 }
 
 .CharacterForm__add-character-button:hover {
-    background-color: #010d1e;
-    color: white;
+    background-color: #FFB72F;
+    color: #010d1e;
 }
 .new-character-name {
     padding:.8em 1.1em;
