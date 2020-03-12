@@ -4,7 +4,7 @@ STAR TREK ENGAGE
 https://star-trek-engage-client-app.now.sh/
 
 ## SCREENSHOTS
-![Screenshot of the landing](src/Components/Media/Screenshots/landingPage.png)
+![](src/Components/Media/Screenshots/landingPage.png)
 
 ![Screenshot of the character creation](src/Components/Media/Screenshots/characterCreation.png)
 
