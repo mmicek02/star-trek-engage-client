@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewCharacterForm component renders the complete form 1`] = `
+<div>
+  <header>
+    <h1>
+      Create a new character
+    </h1>
+  </header>
+  <form
+    className="new-character-form"
+  >
+    <ContextProvider
+      value={
+        Object {
+          "characterrole": "",
+        }
+      }
+    >
+      <fieldset
+        className="new-character-question one"
+      >
+        <h2>
+          Choose your Role
+        </h2>
+        <RoleControls
+          onSetRole={[Function]}
+        />
+        <RoleTextDeails />
+      </fieldset>
+    </ContextProvider>
+    <ContextProvider
+      value={
+        Object {
+          "species": "",
+        }
+      }
+    >
+      <fieldset
+        className="new-character-question"
+      >
+        <h2>
+           Choose your Species
+        </h2>
+        <SpeciesControls
+          onSetSpecies={[Function]}
+        />
+        <SpeciesTextDetails />
+      </fieldset>
+    </ContextProvider>
+    <fieldset
+      className="new-character-question"
+    >
+      <h2>
+        Name your Character
+      </h2>
+      <input
+        className="new-character-name"
+        name="Character Name"
+        onChange={[Function]}
+        type="text"
+      />
+    </fieldset>
+    <button
+      className="CharacterForm__add-character-button "
+      onClick={[Function]}
+      type="submit"
+    >
+      Enroll In StarFleet!
+    </button>
+  </form>
+  <br />
+</div>
+`;
