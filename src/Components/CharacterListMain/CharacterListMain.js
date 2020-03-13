@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Character from '../CharacterView/Character'
 import ApiContext from '../../ApiContext'
 import { getCharactersForUser } from '../../characters-helpers'

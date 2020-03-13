@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Route, Link, BrowserRouter } from 'react-router-dom'
 import ApiContext from '../../ApiContext'
 import config from '../../config'
 import './character.css'
@@ -35,9 +35,9 @@ export default class Character extends React.Component {
         return (
       <div className='Character'>
         <h2 className='Character__name'>
-          <Link to={`/api/characters/${characterid}`}>
-            {charactername}
-          </Link>
+            <Link to={`/api/characters/${characterid}`}>
+              {charactername}
+            </Link>
           {characterrole}
         </h2>
         <button
