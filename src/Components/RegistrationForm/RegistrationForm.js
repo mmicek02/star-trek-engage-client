@@ -20,6 +20,7 @@ class RegistrationForm extends Component {
         username: '',
         userpassword: '',
         datejoined: '',
+        touched: false,
     }
   }
 
@@ -105,7 +106,7 @@ class RegistrationForm extends Component {
           name='username' 
           id='user-name' 
           onChange={e => this.updateUsername(e.target.value)}/>
-          { <ValidationError message={nameError} /> }
+          { this.state.username.touched && <ValidationError message={nameError} /> }
       </div>
       <div>
         <label htmlFor="password">Password </label>
@@ -114,7 +115,7 @@ class RegistrationForm extends Component {
           name='password' 
           id='password' 
           onChange={e => this.updatePassword(e.target.value)} />
-          { <ValidationError message={passwordError} /> }
+          { this.state.userpassword.touched &&<ValidationError message={passwordError} /> }
       </div>
       <button 
         className="add-character-button"

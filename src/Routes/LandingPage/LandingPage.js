@@ -17,7 +17,7 @@ export default class LandingPage extends Component {
                     <p><img 
                         src={commBadge}
                         alt="" 
-                        width='200px'/></p>
+                        width="200px"/></p>
                     <p>Star Trek Engage is a web application designed as an aid to to players of the Star 
                     Trek tabletop role playing game (TTRPG) character creation process. This app will take 
                     the user (player) through each step involved in the process of making their 
