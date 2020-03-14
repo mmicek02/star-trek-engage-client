@@ -41,7 +41,7 @@ class RegistrationForm extends Component {
         userid: this.state.userid,
         username: this.state.username,
         password: this.state.password,
-        datejoined: new Date
+        datejoined: new Date,
     }
 
     const url ='https://infinite-spire-80617.herokuapp.com/api/users';
@@ -62,7 +62,7 @@ class RegistrationForm extends Component {
         return res.json();
     })
     .then(resJson => {
-        this.context.characters.push(resJson)
+        this.context.users.push(resJson)
         this.props.history.push(`/`)
     })
     .catch(err => {
