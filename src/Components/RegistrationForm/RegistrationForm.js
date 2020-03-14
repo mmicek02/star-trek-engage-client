@@ -4,7 +4,7 @@ import '../../style/main.css'
 class RegistrationForm extends React.Component {
     /* 
       This componet will render the form that allows a new user
-      to create an account and sumbit that account to the server.
+      to create an account and submit that account to the server.
   
       They should then be prompted to login.
     */
