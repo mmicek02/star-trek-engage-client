@@ -18,7 +18,7 @@ class RegistrationForm extends Component {
     this.state = {
         userid: '',
         username: '',
-        password: '',
+        userpassword: '',
         datejoined: '',
     }
   }
@@ -31,7 +31,7 @@ class RegistrationForm extends Component {
 
   updatePassword = (Password) => {
     this.setState({
-        password: Password
+      userpassword: Password
     })
   }
 
@@ -41,7 +41,7 @@ class RegistrationForm extends Component {
     const userInfo = {
         userid: this.state.userid,
         username: this.state.username,
-        password: this.state.password,
+        userpassword: this.state.userpassword,
         datejoined: new Date,
     }
 
@@ -83,7 +83,7 @@ class RegistrationForm extends Component {
   }
 
   validatePassword() {
-    const password = this.state.password;
+    const password = this.state.userpassword;
     if (password.length === 0) {
       return 'password is required';
     } else if (password.length < 6) {
