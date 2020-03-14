@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../../style/main.css'
 import propTypes from 'prop-types';
 import ApiContext from '../../ApiContext';
+import ValidationError from '../../ValidationError';
 
 class RegistrationForm extends Component {
     /* 
@@ -104,6 +105,7 @@ class RegistrationForm extends Component {
           name='username' 
           id='user-name' 
           onChange={e => this.updateUsername(e.target.value)}/>
+          { <ValidationError message={nameError} /> }
       </div>
       <div>
         <label htmlFor="password">Password </label>
@@ -111,7 +113,8 @@ class RegistrationForm extends Component {
           type="password" 
           name='password' 
           id='password' 
-          onChange={e => this.updatePassword(e.target.value)}/>
+          onChange={e => this.updatePassword(e.target.value)} />
+          { <ValidationError message={passwordError} /> }
       </div>
       <button 
         className="add-character-button"
