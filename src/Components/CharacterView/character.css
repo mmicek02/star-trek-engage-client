@@ -17,7 +17,6 @@
   color: #bdbcbc;
   float: right;
   font-size: 12px;
-  top: calc((var(--character-button-height) + 32px) * -1);
   transform-origin: right bottom;
   width: calc(var(--character-height));
 }

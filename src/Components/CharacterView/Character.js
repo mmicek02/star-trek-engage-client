@@ -47,6 +47,7 @@ export default class Character extends React.Component {
         >
           Delete Character
         </button>
+        <br />
       </div>
     )
   }
