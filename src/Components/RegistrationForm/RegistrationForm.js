@@ -26,7 +26,8 @@ class RegistrationForm extends Component {
 
   updateUsername = (Username) => {
     this.setState({
-        username: Username
+        username: Username,
+        touched: true
     })
   }
 
