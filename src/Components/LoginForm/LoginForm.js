@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TokenService from '../../Services/token-services';
+import { Button, Input } from '../../Utils/Utils';
 
 class LoginForm extends Component {
 
@@ -38,28 +39,28 @@ class LoginForm extends Component {
           <label htmlFor='LoginForm__user_name'>
             Username
           </label>
-          <input
+          <Input
             required
             name='username'
             id='LoginForm__user_name'>
-          </input>
+          </Input>
         </div>
         <div className='password'>
           <label htmlFor='LoginForm__password'>
             Password
           </label>
-          <input
+          <Input
             required
             name='userpassword'
             type='password'
             id='LoginForm__password'>
-          </input>
+          </Input>
         </div>
-        <button 
+        <Button 
           type='submit'
           onClick={e => this.handleSubmitBasicAuth}>
           Login
-        </button>
+        </Button>
       </form>
     )
   }

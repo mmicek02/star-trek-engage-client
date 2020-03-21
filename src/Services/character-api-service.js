@@ -26,6 +26,24 @@ const CharacterApiService = {
           : res.json()
       )
   },
+  postCharacter(characterId) {
+    return fetch(`${config.API_ENDPOINT}/characters`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `basic ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify({
+        article_id: characterId,
+        text,
+      }),
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+  }
 }
 
 export default CharacterApiService
