@@ -66,7 +66,7 @@ class RegistrationForm extends Component {
     })
     .then(resJson => {
         this.context.users.push(resJson)
-        this.props.history.push(`/`)
+        this.props.history.push(`/login`)
     })
     .catch(err => {
         this.setState({

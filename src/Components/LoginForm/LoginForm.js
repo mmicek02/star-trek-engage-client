@@ -34,6 +34,7 @@ class LoginForm extends Component {
     return (
       <form
         className='LoginForm'
+        onSubmit={this.handleSubmitBasicAuth}
       >
         <div role='alert'>
           {error && <p> {error} </p>}
@@ -60,8 +61,7 @@ class LoginForm extends Component {
           </Input>
         </div>
         <Button 
-          type='submit'
-          onClick={e => this.handleSubmitBasicAuth}>
+          type='submit'>
           Login
         </Button>
       </form>
