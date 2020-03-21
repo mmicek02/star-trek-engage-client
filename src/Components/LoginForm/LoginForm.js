@@ -1,69 +1,27 @@
 import React, { Component } from 'react'
+import TokenService from '../../Services/token-services';
 
 class LoginForm extends Component {
-  
-  constructor(props) {
-      super(props);
-      this.state = {
-          userid: 1,
-          username: '',
-          password: '',
-      }
+
+  static defaultProps = {
+    onLoginSuccess: () => {}
   }
 
-  updateUsername = (Username) => {
-    this.setState({
-        username: Username
-    })
-  }
+  handleSubmitBasicAuth = ev => {
+    ev.preventDefault();
+    const { username , userpassword } = ev.target
 
-  updatePassword = (Password) => {
-    this.setState({
-        password: Password
-    })
-  }
 
-  handleSubmit = e => {
-    e.preventDefault();
+    TokenService.saveAuthToken(
+      TokenService.makeBasicAuthToken(username.value, userpassword.value)
+    )
 
-    const userInfo = {
-        userid: this.state.userid,
-        username: this.state.username,
-        password: this.state.password
-    }
-
-    const url ='https://infinite-spire-80617.herokuapp.com/api/users';
-    const options = {
-        method: 'POST',
-        body: JSON.stringify(userInfo),
-        headers: {
-          'content-type': 'application/json'
-        }
-    };
-
-    fetch(url, options)
-  
-    .then(res => {
-        if(!res.ok) {
-            throw new Error('Something went wrong, please try again later');
-        }
-        return res.json();
-    })
-    .then(resJson => {
-        this.context.characters.push(resJson)
-        this.props.history.push(`/api/users/${userInfo.userid}`)
-    })
-    .catch(err => {
-        this.setState({
-            error: err.message
-        })
-    })
+    username.value = ''
+    userpassword.value = ''
+    this.props.onLoginSuccess()
   }
 
   render() {
-    const error = this.state.error 
-    ? <div className="error">{this.state.error}</div>
-    : "";
 
     return (
       <form
@@ -78,8 +36,7 @@ class LoginForm extends Component {
           <input
             required
             name='user_name'
-            id='LoginForm__user_name'
-            onChange={e => this.updateUsername(e.target.value)}>
+            id='LoginForm__user_name'>
           </input>
         </div>
         <div className='password'>
@@ -90,16 +47,14 @@ class LoginForm extends Component {
             required
             name='password'
             type='password'
-            id='LoginForm__password'
-            onChange={e => this.updatePassword(e.target.value)}>
+            id='LoginForm__password'>
           </input>
         </div>
         <button 
           type='submit'
-          onClick={e => this.handleSubmit(e)}>
+          onClick={e => this.handleSubmitBasicAuth}>
           Login
         </button>
-        { error }
       </form>
     )
   }
