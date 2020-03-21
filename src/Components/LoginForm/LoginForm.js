@@ -30,7 +30,7 @@ class LoginForm extends Component {
 
   render() {
     const {error} = this.state
-    console.log({ username, userpassword})
+
     return (
       <form
         className='LoginForm'
