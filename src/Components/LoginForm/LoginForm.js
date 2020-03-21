@@ -18,7 +18,7 @@ class LoginForm extends Component {
 
     console.log('login form submitted')
     console.log({ username, userpassword})
-    
+
     TokenService.saveAuthToken(
       TokenService.makeBasicAuthToken(username.value, userpassword.value)
     )
@@ -30,6 +30,7 @@ class LoginForm extends Component {
 
   render() {
     const {error} = this.state
+    console.log({ username, userpassword})
     return (
       <form
         className='LoginForm'
