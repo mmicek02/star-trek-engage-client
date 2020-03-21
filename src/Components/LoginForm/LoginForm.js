@@ -7,6 +7,10 @@ class LoginForm extends Component {
     onLoginSuccess: () => {}
   }
 
+  state = {
+    error: null
+  }
+
   handleSubmitBasicAuth = ev => {
     ev.preventDefault();
     const { username , userpassword } = ev.target
@@ -22,20 +26,21 @@ class LoginForm extends Component {
   }
 
   render() {
-
+    const {error} = this.state
     return (
       <form
         className='LoginForm'
       >
         <div role='alert'>
+          {error && <p> {error} </p>}
         </div>
         <div className='user_name'>
           <label htmlFor='LoginForm__user_name'>
-            User name
+            Username
           </label>
           <input
             required
-            name='user_name'
+            name='username'
             id='LoginForm__user_name'>
           </input>
         </div>
@@ -45,7 +50,7 @@ class LoginForm extends Component {
           </label>
           <input
             required
-            name='password'
+            name='userpassword'
             type='password'
             id='LoginForm__password'>
           </input>
