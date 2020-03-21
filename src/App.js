@@ -7,6 +7,8 @@ import NewCharacterForm from './Components/CharacterForm/NewCharacterForm';
 import LandingPage from './Routes/LandingPage/LandingPage';
 import CharacterPageMain from './Components/CharacterView/CharacterPageMain';
 import CharacterListMain from './Components/CharacterListMain/CharacterListMain';
+import PrivateRoute from './Utils/PrivateRoute'
+import PublicOnlyRoute from './Utils/PublicOnlyRoute'
 import ApiContext from './ApiContext';
 import config from './config';
 
@@ -62,10 +64,10 @@ class App extends Component {
           exact 
           path='/' 
           component={LandingPage} />
-        <Route 
+        <PublicOnlyRoute 
           path='/login' 
           component={LoginPage} />
-        <Route 
+        <PublicOnlyRoute 
           path='/register' 
           component={RegistrationPage} />
       </>
@@ -74,7 +76,7 @@ class App extends Component {
   renderCharacterCreationsRoutes() {
     return (
       <>
-        <Route 
+        <PrivateRoute 
           path='/new-character' 
           component={NewCharacterForm} />
       </>
@@ -84,14 +86,14 @@ class App extends Component {
     return (
       <>
         {['/api/users/:userid'].map(path =>
-          <Route
+          <PrivateRoute
             exact
             key={path} 
             path={path}
             component={CharacterListMain} />
         )}
         
-        <Route 
+        <PrivateRoute 
           path='/api/characters/:characterid' 
           component={CharacterPageMain} />
       </>

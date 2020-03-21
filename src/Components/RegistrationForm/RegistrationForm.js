@@ -94,7 +94,6 @@ class RegistrationForm extends Component {
   }
 
    render() {
-    console.log(this.state)
     const nameError = this.validateUsername();
     const passwordError = this.validatePassword();
     return (
