@@ -16,7 +16,9 @@ class LoginForm extends Component {
     ev.preventDefault();
     const { username , userpassword } = ev.target
 
-
+    console.log('login form submitted')
+    console.log({ username, userpassword})
+    
     TokenService.saveAuthToken(
       TokenService.makeBasicAuthToken(username.value, userpassword.value)
     )

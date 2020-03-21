@@ -26,6 +26,7 @@ class Header extends Component {
               to='/register'>
               Register
             </Link>
+            {' '}
             <Link
               to='/login'>
               Log in
