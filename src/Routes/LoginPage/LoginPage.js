@@ -8,6 +8,11 @@ export default class LoginPage extends Component {
       <div className='LoginPage'>
         <h2>Login</h2>
         <LoginForm />
+        <p>
+          username: DemoAccount
+          <br />
+          password: DemoPassword
+        </p>
       </div>
     )
   }
