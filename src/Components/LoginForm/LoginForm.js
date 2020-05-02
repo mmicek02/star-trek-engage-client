@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TokenService from '../../Services/token-services';
+import AuthApiService from '../../Services/auth-api-services'
 import { Button, Input } from '../../Utils/Utils';
 
 class LoginForm extends Component {
@@ -16,16 +17,19 @@ class LoginForm extends Component {
     ev.preventDefault();
     const { username , userpassword } = ev.target
 
-    console.log('login form submitted')
-    console.log({ username, userpassword})
-
-    TokenService.saveAuthToken(
-      TokenService.makeBasicAuthToken(username.value, userpassword.value)
-    )
-
-    username.value = ''
-    userpassword.value = ''
-    this.props.onLoginSuccess()
+    AuthApiService.postLogin({
+      username: username.value,
+      userpassword: userpassword.value,
+    })
+      .then(res => {
+        username.value = ''
+        userpassword.value = ''
+        TokenService.saveAuthToken(res.authToken)
+        this.props.onLoginSuccess()
+      })
+      .catch(res => {
+        this.setState({ error: res.error })
+      })
   }
 
   render() {
