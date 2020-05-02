@@ -5,6 +5,7 @@ import SpeciesControls from '../../Character-context/SpeciesControl';
 import SpeciesTextDetails from './CharacterSpecies/CharacterSpeciesDetails';
 
 import ApiContext from '../../ApiContext';
+import TokenService from '../../Services/token-services'
 
 import RoleContext from '../../Character-context/RoleContext';
 import RoleControls from '../../Character-context/RoleControls';
@@ -124,7 +125,8 @@ class NewCharacterForm extends Component {
             method: 'POST',
             body: JSON.stringify(characterInfo),
             headers: {
-              'content-type': 'application/json'
+              'content-type': 'application/json',
+              'authorization': `bearer ${TokenService.getAuthToken()}`,
             }
         };
     
