@@ -16,6 +16,11 @@ class Header extends Component {
             to='/'>
             Logout
           </Link>
+          {' '}
+          <Link
+            to='/api/users/:userid'>
+            View Characters
+          </Link>
         </div>
       )
     }
