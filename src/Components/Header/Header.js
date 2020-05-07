@@ -20,11 +20,10 @@ class Header extends Component {
             Logout
           </Link>
           {' / '}
-          <Route
-            path='/api/users/:userid'
-            component={CharacterListMain} >
+          <Link
+            to={`/api/users/${users.userid}`}>
             View Characters
-          </Route>
+          </Link>
         </div>
       )
     }
