@@ -9,9 +9,9 @@ export default class LoginPage extends Component {
         <h2>Login</h2>
         <LoginForm />
         <p>
-          username: DemoAccount
+          username: MikeTest
           <br />
-          password: DemoPassword
+          password: MikePa$$w0rd
         </p>
       </div>
     )

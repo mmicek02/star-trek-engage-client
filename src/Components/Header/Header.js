@@ -16,9 +16,9 @@ class Header extends Component {
             to='/'>
             Logout
           </Link>
-          {' '}
+          {' / '}
           <Link
-            to='/api/users/:userid'>
+            to="/api/users/:${props.userid}">
             View Characters
           </Link>
         </div>
@@ -32,7 +32,7 @@ class Header extends Component {
               to='/register'>
               Register
             </Link>
-            {' '}
+            {' / '}
             <Link
               to='/login'>
               Log in
