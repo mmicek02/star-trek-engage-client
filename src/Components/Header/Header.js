@@ -4,11 +4,14 @@ import TokenService from '../../Services/token-services'
 import '../../style/main.css'
 
 class Header extends Component {
-    handleLogoutClick = () => {
+  static contextType = ApiContext;
+  
+  handleLogoutClick = () => {
       TokenService.clearAuthToken()
-    }
+  }
   
     renderLogoutLink() {
+      const { users =[] } = this.context
       return (
         <div className='Header__logged-in'>
           <Link
@@ -17,10 +20,11 @@ class Header extends Component {
             Logout
           </Link>
           {' / '}
-          <Link
-            to="/api/users/:${props.userid}">
+          <Route
+            path='/api/users/:userid'
+            component={CharacterListMain} >
             View Characters
-          </Link>
+          </Route>
         </div>
       )
     }
