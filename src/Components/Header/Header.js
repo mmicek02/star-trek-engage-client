@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link, BrowserRouter } from 'react-router-dom'
 import TokenService from '../../Services/token-services'
+import ApiContext from '../../ApiContext'
 import '../../style/main.css'
 
 class Header extends Component {
