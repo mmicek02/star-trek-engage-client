@@ -16,6 +16,7 @@ class App extends Component {
   state = {
     characters: [],
     users: [],
+    userid: null
   };
 
   componentDidMount() {
@@ -85,13 +86,11 @@ class App extends Component {
   renderUserRoutes() {
     return (
       <>
-        {['/api/users/:userid'].map(path =>
+        
           <PrivateRoute
             exact
-            key={path} 
-            path={path}
+            path='/mycharacters'
             component={CharacterListMain} />
-        )}
         
         <PrivateRoute 
           path='/api/characters/:characterid' 

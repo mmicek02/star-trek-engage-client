@@ -22,7 +22,7 @@ class Header extends Component {
           </Link>
           {' / '}
           <Link
-            to={`/api/users/${users.userid}`}>
+            to='/mycharacters'>
             View Characters
           </Link>
         </div>

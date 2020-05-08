@@ -3,6 +3,7 @@ import '../../style/main.css'
 import propTypes from 'prop-types';
 import ApiContext from '../../ApiContext';
 import ValidationError from '../../ValidationError';
+import config from '../../config';
 
 class RegistrationForm extends Component {
     /* 
@@ -47,7 +48,7 @@ class RegistrationForm extends Component {
         datejoined: new Date,
     }
 
-    const url ='https://infinite-spire-80617.herokuapp.com/api/users';
+    const url =`${config.API_ENDPOINT}/users`;
     const options = {
         method: 'POST',
         body: JSON.stringify(userInfo),
