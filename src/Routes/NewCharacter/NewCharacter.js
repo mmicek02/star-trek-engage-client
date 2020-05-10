@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
-import CharacterRace from '../../Components/CharacterForm/CharacterRace/CharacterRace';
-import CharacterValues from '../../Components/CharacterForm/CharacterValues/CharacterValues';
-
 
 export default class NewCharacter extends Component {
 

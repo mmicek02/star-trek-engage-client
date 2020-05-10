@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import UserHomePage from './UserHomePage'
+import NewCharacter from './NewCharacter'
 
-describe(`UserHomePage component`, () => {
+describe(`NewCharacter component`, () => {
 
   it('renders without errors', () => {
     const div = document.createElement('div');
     ReactDOM.render(
-            <UserHomePage />,div);
+            <NewCharacter />,div);
     ReactDOM.unmountComponentAtNode(div);
   })
 
