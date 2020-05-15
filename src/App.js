@@ -18,7 +18,13 @@ class App extends Component {
     users: [],
     userid: null
   };
+  afterLogin(userid) {
+    this.setState({
+      userid
+    })
 
+
+  }
   componentDidMount() {
     Promise.all([
       fetch(`${config.API_ENDPOINT}/characters`),
@@ -67,7 +73,7 @@ class App extends Component {
           component={LandingPage} />
         <PublicOnlyRoute 
           path='/login' 
-          component={LoginPage} />
+          component={r => <LoginPage afterLogin={u => this.afterLogin(u)} /> } />
         <PublicOnlyRoute 
           path='/register' 
           component={RegistrationPage} />
@@ -90,7 +96,7 @@ class App extends Component {
           <PrivateRoute
             exact
             path='/mycharacters'
-            component={CharacterListMain} />
+            component={routeProps => <CharacterListMain userid={this.state.userid} /> } />
         
         <PrivateRoute 
           path='/api/characters/:characterid' 

@@ -11,6 +11,7 @@ import RoleContext from '../../Character-context/RoleContext';
 import RoleControls from '../../Character-context/RoleControls';
 import RoleTextDetails from './CharacterRole/RoleTextDetails';
 
+import config from '../../config'
 import './CharacterForm.css'
 
 class NewCharacterForm extends Component {
@@ -120,7 +121,7 @@ class NewCharacterForm extends Component {
             equipment: this.state.equipment,
         }
 
-        const url ='https://infinite-spire-80617.herokuapp.com/api/characters';
+        const url =`${config.API_ENDPOINT}/characters`;
         const options = {
             method: 'POST',
             body: JSON.stringify(characterInfo),
@@ -140,7 +141,7 @@ class NewCharacterForm extends Component {
         })
         .then(resJson => {
             this.context.characters.push(resJson)
-            this.props.history.push(`/api/users/${characterInfo.userid}`)
+            this.props.history.push(`/mycharacters`)
         })
         .catch(err => {
             this.setState({

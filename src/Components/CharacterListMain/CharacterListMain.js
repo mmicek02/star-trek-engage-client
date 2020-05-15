@@ -14,7 +14,7 @@ export default class CharacterListMain extends React.Component {
     static contextType = ApiContext
 
     render() {
-        const { userid } = this.props.match.params
+        const { userid } = this.props
         const { characters } = this.context
         const charactersForUser = getCharactersForUser(characters, userid)
 

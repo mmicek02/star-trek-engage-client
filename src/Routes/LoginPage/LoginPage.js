@@ -7,7 +7,7 @@ export default class LoginPage extends Component {
     return (
       <div className='LoginPage'>
         <h2>Login</h2>
-        <LoginForm />
+        <LoginForm onLoginSuccess={this.props.afterLogin} />
         <p>
           username: MikeTest
           <br />

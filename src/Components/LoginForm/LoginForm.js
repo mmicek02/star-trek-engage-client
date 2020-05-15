@@ -18,8 +18,8 @@ class LoginForm extends Component {
     const { username , userpassword } = ev.target
 
     AuthApiService.postLogin({
-      username: username.value,
-      userpassword: userpassword.value,
+      username: username.value.trim(),
+      userpassword: userpassword.value.trim(),
     })
       .then(res => {
         console.log(res)
@@ -29,7 +29,8 @@ class LoginForm extends Component {
         this.props.onLoginSuccess(res.userid)
       })
       .catch(res => {
-        this.setState({ error: res.error })
+        console.log(res)
+        this.setState({ error: res.error.message })
       })
   }
 
