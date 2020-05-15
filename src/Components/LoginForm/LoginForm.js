@@ -22,14 +22,12 @@ class LoginForm extends Component {
       userpassword: userpassword.value.trim(),
     })
       .then(res => {
-        console.log(res)
         username.value = ''
         userpassword.value = ''
         TokenService.saveAuthToken(res.authToken)
         this.props.onLoginSuccess(res.userid)
       })
       .catch(res => {
-        console.log(res)
         this.setState({ error: res.error.message })
       })
   }
