@@ -3,7 +3,8 @@
 ## Projet Details
 
 ### Screenshots
-
+![Landing Page](/Screenshots/LandingPage.png)
+![Character Creation Page](/Screenshots/CharacterCreation.png)
 <img src ="./Screenshots/LandingPage.png" alt="Landing Page" width="400px">
 <img src ="./Screenshots/CharacterCreation.png" alt="Character Creation Page" width="400px">
 <img src ="./Screenshots/CharacterListView.png" alt="Character List View Page" width="400px">
