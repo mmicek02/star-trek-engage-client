@@ -11,9 +11,10 @@ body {
     justify-content: center;
 }
 h1 {
-    padding-top: 100px;
+    text-align: center;
 }
 section {
+    position: relative;
     min-height: 200px;
     min-width: 400px;
     background-color: white;

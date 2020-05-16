@@ -11,6 +11,8 @@ import RoleContext from '../../Character-context/RoleContext';
 import RoleControls from '../../Character-context/RoleControls';
 import RoleTextDetails from './CharacterRole/RoleTextDetails';
 
+import ValidationError from '../../ValidationError'
+
 import config from '../../config'
 import './CharacterForm.css'
 
@@ -150,7 +152,30 @@ class NewCharacterForm extends Component {
         })
       }
     
+    validateSpecies() {
+        const species = this.state.species;
+            if (species === null ) {
+                return 'Please choose a Species for your character'
+            }
+    }
+
+    validateRole() {
+        const role = this.state.role;
+            if (role === null ) {
+                return 'Please choose a role for your character'
+            }
+    }
+
+    validateName() {
+        const charactername = this.state.charactername;
+            if (charactername === '' ) {
+                return 'Please choose a name for your character'
+            }
+    }
     render() {
+        const speciesError = this.validateSpecies();
+        const roleError = this.validateRole();
+        const nameError = this.validateName();
 
         const error = this.state.error 
         ? <div className="error">{this.state.error}</div>
@@ -164,10 +189,10 @@ class NewCharacterForm extends Component {
         }
         return (
             <div>
-                { error }
                 <header>
                     <h1>Create a new character</h1>
                 </header>
+                { error }
                 <form className='new-character-form'>
                     {/* Add Role to Character */}
                     <RoleContext.Provider
@@ -180,6 +205,8 @@ class NewCharacterForm extends Component {
                         </fieldset>
                     </RoleContext.Provider>
 
+                    {<ValidationError message={speciesError} />}
+                    
                     {/* Add Species to Character*/}
                     <SpeciesContext.Provider
                         value={contextSpeciesValue}>
@@ -191,6 +218,8 @@ class NewCharacterForm extends Component {
                         </fieldset>
                     </SpeciesContext.Provider>
 
+                    {<ValidationError message={roleError} />}
+
                     {/* Add Character Name */}
                     <fieldset className='new-character-question'>
                         <h2>Name your Character</h2>
@@ -200,10 +229,18 @@ class NewCharacterForm extends Component {
                             name="Character Name" 
                             onChange= {e => this.updateCharacterName(e.target.value)}/>
                     </fieldset>
+
+                    {<ValidationError message={nameError} />}
                         <button
                             className='CharacterForm__add-character-button '
                             type="submit"
                             onClick={e => this.handleSubmit(e)}
+                            disabled = {
+                                this.validateSpecies(),
+                                this.validateRole(),
+                                this.validateName(),
+                                !!nameError
+                              }
                         >
                             Enroll In StarFleet!
                         </button>
