@@ -37,19 +37,6 @@ export default class LandingPage extends Component {
                         width='200px'/></p>
                     <p>You will be able to find all of your characters equipment quickly and easily, meaning you have to spend less time searching and more time taking action and rolling dice with friends!</p>
                 </section>
-                <section>
-                    <header>
-                        <h3>Keep track of your progress</h3>
-                    </header>
-                    <p><img 
-                        src={pencil}
-                        alt="" 
-                        width='150px'/></p>
-                    <p>Take notes and comment on your character sheet so you can remember everything that happens during your gaming session!</p>
-                </section>
-                <section>
-                    <RegistrationPage />
-                </section>
             </div>
         )
     }
