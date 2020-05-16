@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ApiContext from '../../ApiContext'
+import TokenService from '../../Services/token-services'
+
 import config from '../../config'
 import './character.css'
 
@@ -17,7 +19,8 @@ export default class Character extends React.Component {
     fetch(`${config.API_ENDPOINT}/characters/${characterid}`, {
       method: 'DELETE',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
     })
       .then(() => {
