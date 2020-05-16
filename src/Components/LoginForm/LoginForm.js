@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import TokenService from '../../Services/token-services';
 import AuthApiService from '../../Services/auth-api-services'
 import { Button, Input } from '../../Utils/Utils';
-
+import './LoginForm.css'
 class LoginForm extends Component {
 
   static defaultProps = {
@@ -64,7 +64,8 @@ class LoginForm extends Component {
             id='LoginForm__password'>
           </Input>
         </div>
-        <Button 
+        <Button
+          className="loginButton" 
           type='submit'>
           Login
         </Button>

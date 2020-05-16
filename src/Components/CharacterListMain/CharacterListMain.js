@@ -1,5 +1,6 @@
 import React from 'react'
 import Character from '../CharacterView/Character'
+import { Link } from 'react-router-dom'
 import ApiContext from '../../ApiContext'
 import { getCharactersForUser } from '../../characters-helpers'
 import './characterListMain.css'
@@ -35,6 +36,12 @@ export default class CharacterListMain extends React.Component {
                         ) }
         )}
                 </ul>
+                <div className="add-character-button-list">
+                    <Link
+                        to='/new-character'>
+                           + Add Character
+                    </Link>
+                </div>
             </section>
         )
     }

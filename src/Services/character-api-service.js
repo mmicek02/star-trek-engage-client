@@ -35,19 +35,6 @@ const CharacterApiService = {
       },
       body: JSON.stringify(
         console.log(characterId)
-        // characterid: 1,
-        //     userid: 1,
-        //     characterrole: '',
-        //     species: '',
-        //     attributes: [
-        //         11, 10, 9, 9, 8, 7
-        //     ],
-        //     disciplines: [
-        //         5, 4, 3, 3, 2, 2
-        //     ],
-        //     charactervalue: 'Logical',
-        //     charactername: '',
-        //     equipment: 'Tricorder, Comm Badge, Phaser'
       ),
     })
       .then(res =>

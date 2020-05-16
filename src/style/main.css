@@ -37,7 +37,8 @@
   }
 
   a:hover {
-    color: rgb(245, 14, 245);
+    color: #FFB72F;
+    font-weight: 700;
   }
   
   section {
@@ -56,7 +57,7 @@
     margin-top: 15px;
   }
   .logo {
-    max-width: 500px;
+    max-width: 300px;
   }
 
   .add-character-button {
